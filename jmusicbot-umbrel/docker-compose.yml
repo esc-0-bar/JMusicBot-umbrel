@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: jmusicbot-umbrel-jmusicbot_1
+      APP_PORT: 3000
+    
+  server:
+    image: e3c0b4r/jmusicbot:latest
+    volumes:
+     - ${APP_DATA_DIR}/jmusicbot/data:/config
+    restart: on-failure
+    user: "1000:1000"
+    init: true

@@ -1,0 +1,44 @@
+manifestVersion: 1
+id: jmusicbot-umbrel
+name: JMusicBot
+tagline: A cross-platform Discord music bot with a clean interface, and that is easy to set up and run yourself!
+icon: http://i.imgur.com/VvXYp5j.png
+category: Bot
+version: "0.4.1"
+port: 9999
+description: >-
+  Features
+  - Easy to run (just make sure Java is installed, and run!)
+  - Fast loading of songs
+  - No external keys needed (besides a Discord Bot token)
+  - Smooth playback
+  - Server-specific setup for the "DJ" role that can moderate the music
+  - Clean and beautiful menus
+  - Supports many sites, including Youtube, Soundcloud, and more
+  - Supports many online radio/streams
+  - Supports local files
+  - Playlist support (both web/youtube, and local)
+
+developer: esc-0-bar
+website: https://umbrel.com
+submitter: esc-0-bar
+submission: https://github.com/esc-0-bar/JMusicBot-umbrel
+repo: https://github.com/esc-0-bar/JMusicBot-umbrel
+support: https://github.com/esc-0-bar/JMusicBot-umbrel/issues
+gallery:
+  - https://i.imgur.com/kVtTKvS.gif
+releaseNotes: >-
+  This release fixes some YouTube playback issues and adds the seek feature, alongside some other minor improvements.
+
+  - Switched to a new YouTube source handler internally that should be more stable
+  - Added the seek command and the ability to request songs starting at a specific timestamp
+  - Starting a song from a specific timestamp is done with the same format that YouTube uses, a &t=123 bit on the end of a URL. Copying a YouTube url that starts from a timestamp should work in JMusicBot now.
+  - Seeking within a song can be to an exact timestamp, or forwards/backwards using a + or - and then an amount of time.
+  - Allow setting the log level and eval engine in the config (mainly for advanced users)
+  - Allow setting the maximum number of YouTube playlist pages that can be loaded (in the config)
+  - Reverted the change to make the bot self-deafen because self-deafening doesn't actually reduce bandwidth (see #1554 for details)
+  - Minor changes to some log messages
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
