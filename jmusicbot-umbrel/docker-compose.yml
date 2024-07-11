@@ -9,8 +9,6 @@ services:
     
   server:
     image: e3c0b4r/jmusicbot:latest
-    volumes:
-     - ${APP_DATA_DIR}/jmusicbot/data:/config
     restart: on-failure
     user: "1000:1000"
     init: true
